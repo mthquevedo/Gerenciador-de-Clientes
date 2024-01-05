@@ -1,13 +1,12 @@
+import React from 'react';
 import { Input } from './style';
 
-import type { InputTypes } from '../../types/LoginTypes';
+interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> { }
 
-function InputBox({ type, placeholder }: InputTypes) {
+const InputBox = React.forwardRef<HTMLInputElement, InputProps>((props, ref) => {
     return (
-        <Input>
-            <input type={type} placeholder={placeholder} required />
-        </Input>
+        <Input {...props} ref={ref} />
     );
-}
+})
 
 export default InputBox

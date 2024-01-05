@@ -49,6 +49,10 @@ export const RightSec = styled.div`
    width: 60vw;
    height: 100vh;
    background-color: #0F1219;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
 
    img {
       width: 400px;
@@ -59,6 +63,7 @@ export const RightSec = styled.div`
    }
 
    h1{
+      align-self: center;
       font-size: 1.7em;
       font-weight: 600;
       color: #ffffff;
@@ -69,43 +74,63 @@ export const RightSec = styled.div`
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
+      align-items: start;
       min-height:100vh;
-      gap: 0.9em
+      gap: 1em;
    }
 
-   input[type="string"]{
-      border-radius: 0.4375rem;
-      padding: 0.5em;
-      width: 25vw;
-      border-bottom: 3px solid #6759C0;
-      background: #DEE3E9;
+   input[type="submit"]{
+      width: 15vw;
 
-      &:focus {
-         border-color: #6759C0;
+      &:hover {
+         cursor: pointer;
       }
    }
 
-   input[type="string"],input[type="password"]{
-      border-radius: 0.4375rem;
-      padding: 0.5em;
-      width: 25vw;
-      border-bottom: 3px solid #6759C0;
-      background: #DEE3E9;
-   }
-
-
-   label{
-      text-align:left;
-      color: #ffffff;
-   }
-
-
-   input[type="submit"]{
-      border-radius: 0.4375rem;
-      padding: 0.5em;
-      width: 25vw;
-      background: #6759C0;
+   div{
+      align-self: center;
    }
 `;
 
+export const Label = styled.label`
+   font-size: 0.8em;
+   color: #ffffff;
+   display: block;
+   position: relative;
+   padding-top: 1px;
+   padding-left: 20px;
+   margin-bottom: 12px;
+   cursor: pointer;
+   user-select: none;
+
+   input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+
+      &:checked + span{
+         display:block;
+         background-color: #2196F3;
+      }
+   }
+
+   span {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 12px;
+      width: 12px;
+      background-color: #0F1219;
+      border: 1px solid #ffffff;
+      border-radius: 50%;
+
+      &:hover {
+         background-color: #ccc;
+      }
+
+      &:after {
+         content: "";
+         position: absolute;
+      }
+   }
+`;

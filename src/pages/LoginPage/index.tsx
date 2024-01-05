@@ -1,8 +1,34 @@
-import { LeftSec, GradientOverlay, Image, RightSec, FullPage } from './style';
+import React, { useState } from 'react';
+import { LeftSec, GradientOverlay, Image, RightSec, FullPage, Label } from './style';
 import InputBox from '../../components/InputBox';
 import DefaultButton from '../../components/Button';
+import { useNavigate } from 'react-router-dom';
+import { useForm } from 'react-hook-form';
+
+interface LoginForm {
+    nameUser: string;
+    passwordUser: string;
+    radio: boolean;
+}
 
 function LoginPage() {
+    const { register, handleSubmit } = useForm<LoginForm>()
+
+    //const navigate = useNavigate();
+
+    const verifySubmit = (data: LoginForm) => {
+        //console.log('Nome digitado:', data.nameUser);
+        //console.log('Senha digitada:', data.passwordUser);
+
+        if (data.radio) {
+            console.log("Sucesso");
+        } else {
+            console.log("Checkbox não marcado");
+        }
+
+        //navigate('/dashboard');
+    };
+
     return (
         <FullPage>
             <LeftSec>
@@ -14,18 +40,22 @@ function LoginPage() {
             <RightSec>
                 <img src="/assets/Logo-Ploomes-Brand-Horizontal@2x.png" alt="Logo da empresa Ploomes" />
                 <div>
-                    <form action="">
+                    <form action="" id="userData" onSubmit={handleSubmit(verifySubmit)}>
                         <h1>Faça login para entrar</h1>
-                        <InputBox type="string" placeholder="Nome" />
-                        <InputBox type="password" placeholder="Chave de acesso" />
+                        <InputBox {...register('nameUser', { required: true })} placeholder="Nome" />
+                        <InputBox {...register('passwordUser', { required: true })} type="password" placeholder="Chave de acesso" />
 
-                        <label><input type="checkbox" />Lembrar nos próximos acessos</label>
-
-                        <DefaultButton type="submit" />
+                        <Label>Lembrar nos próximos acessos
+                            <input type="checkbox"  {...register('radio')} />
+                            <span></span>
+                        </Label>
+                        <div>
+                            <DefaultButton type="submit" value="Entrar" />
+                        </div>
                     </form>
                 </div>
             </RightSec>
-        </FullPage >
+        </FullPage>
     );
 }
 

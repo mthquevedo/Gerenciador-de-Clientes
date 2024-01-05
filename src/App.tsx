@@ -1,12 +1,13 @@
 import React from 'react';
-import { Application } from './style';
-import LoginPage from './pages/LoginPage';
+import { GlobalStyle } from './components/GlobalStyle/style';
+import RoutesApp from './routes';
 
 function App() {
   return (
-    <Application>
-      <LoginPage />
-    </Application>
+    <>
+      <RoutesApp />
+      <GlobalStyle />
+    </>
   );
 }
 
