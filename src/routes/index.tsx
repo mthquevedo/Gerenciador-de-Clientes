@@ -2,9 +2,10 @@ import { Fragment } from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LoginPage from '../pages/LoginPage';
 import DashboardPage from '../pages/DashboardPage';
+import useAuth from "../hooks/useAuth";
 
 const Private: React.FC<{ Item: React.ElementType }> = ({ Item }) => {
-    const signed = false;
+    const { signed } = useAuth();
 
     return signed ? <Item /> : <LoginPage />;
 }

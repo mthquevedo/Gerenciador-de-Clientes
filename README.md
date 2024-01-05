@@ -2,6 +2,8 @@
 
 Utilizei a biblioteca React Navigation para as rotas
 
+Chave de acesso: F51BBD2CB341C3D123232EB60322BAC220F9175EC646ABA7ABCC9BB507708B19F2AE3D6777DF1B4ED26FFCDD8DF25627ACCDF6554EF29C999F9DA080FD941374
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
