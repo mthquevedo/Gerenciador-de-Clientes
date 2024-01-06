@@ -1,13 +1,12 @@
+import React from 'react';
 import { Button } from './style';
 
-import type { ButtonTypes } from '../../types/LoginTypes';
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLInputElement> { }
 
-function DefaultButton({ type, value }: ButtonTypes) {
+const DefaultButton = React.forwardRef<HTMLInputElement, ButtonProps>((props, ref) => {
     return (
-        <Button>
-            <input type={type} value={value} />
-        </Button>
+        <Button {...props} ref={ref} />
     );
-}
+})
 
 export default DefaultButton

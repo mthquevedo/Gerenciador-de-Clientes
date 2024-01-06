@@ -19,9 +19,6 @@ function LoginForm() {
 
     const verifySubmit = (data: LoginProps) => {
 
-        //console.log('Nome digitado:', data.nameUser);
-        //console.log('Senha digitada:', data.passwordUser);
-
         const res = login(data.nameUser, data.passwordUser)
 
         navigate('/dashboard');

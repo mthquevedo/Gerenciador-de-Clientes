@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useEffect, useState } from "react";
+import { createContext, ReactNode, useState } from "react";
 
 interface User {
     nameUser: string;
@@ -19,38 +19,21 @@ interface AuthProviderProps {
 export const AuthContext = createContext<AuthContextProps>({} as AuthContextProps);
 
 export const AuthProvider = ({ children }: AuthProviderProps) => {
-    const [user, setUser] = useState<User | null>(null);
-
-    useEffect(() => {
+    const [user, setUser] = useState<User | null>(() => {
         const storedName = localStorage.getItem("name");
         const storedKey = localStorage.getItem("key");
 
         if (storedName && storedKey) {
-            const storedUsers = JSON.parse(storedKey) as User[];
-
-            if (Array.isArray(storedUsers)) {
-                const storedUser = storedUsers.find((storedUser: User) => storedUser.nameUser === JSON.parse(storedName).nameUser);
-
-                if (storedUser) setUser(storedUser);
-            }
+            return { nameUser: storedName, passwordUser: storedKey };
         }
-    }, []);
+
+        return null;
+    });
 
     const login = (nameUser: string, passwordUser: string) => {
-        const storedData = localStorage.getItem("key");
-        const usersStorage = storedData ? JSON.parse(storedData) as User[] : [];
-
-        if (Array.isArray(usersStorage)) {
-            const existingUser = usersStorage.find((storedUser: User) => storedUser.nameUser === nameUser);
-
-            if (!existingUser) {
-                const newUser: User = { nameUser, passwordUser };
-                const updatedUsers = [...usersStorage, newUser];
-                localStorage.setItem("key", JSON.stringify(updatedUsers));
-                localStorage.setItem("name", JSON.stringify({ nameUser }));
-                setUser(newUser);
-            }
-        }
+        localStorage.setItem("name", nameUser);
+        localStorage.setItem("key", passwordUser);
+        setUser({ nameUser, passwordUser });
     };
 
     const logout = () => {
