@@ -40,8 +40,6 @@ function Header() {
         const res = logout();
     }
 
-    //console.log(imageProfile)
-
     return (
         <HeaderStyle>
             <img src="./assets/Logo-Ploomes-Brand-Horizontal@2x.png" alt="" />
