@@ -1,53 +1,36 @@
-# Getting Started with Create React App
+## Aplicação externa Ploomes para gestão de clientes
+A aplicação foi desenvolvida pensando em facilitar a gestão da carteira de clientes dos usuários da Ploomes, a ideia principal é que ela foi simples e efetiva, agindo como um tela rápida para ações que demandam agilidade.
 
-Utilizei a biblioteca React Navigation para as rotas
-Utilizei a lib react hook form para criar hooks dinâmicos nos formulários
-Utilizei a lib axios para gerenciamento de requisições da api
-Utilizei a lib react-icons para estilização
+No desenvolvimento foram utilizadas as seguintes bibliotecas:
 
-Chave de acesso: F51BBD2CB341C3D123232EB60322BAC220F9175EC646ABA7ABCC9BB507708B19F2AE3D6777DF1B4ED26FFCDD8DF25627ACCDF6554EF29C999F9DA080FD941374
+**React Navigation:** para o roteamento de páginas com autenticação por contexto. O usuário só pode acessar a aplicação se validar seu login e após isso não precisará logar novamente, tendo em vista que seus dados estão armazenados no LocalStorage para uso do sistema;
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**React Hook Form:** na criação de hooks dinâmicos para os formulários;
 
-## Available Scripts
+**Axios:** para gerenciamento de requisições da api Ploomes;
 
-In the project directory, you can run:
+**React Icons:** na utilização de ícones nas telas;
+
+##
+Tecnologias utilizadas:
+<div style="display: inline_block">
+  <img align="center" alt="Quevedo-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
+  <img align="center" alt="Quevedo-Ts" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-plain.svg">
+  <img align="center" alt="Quevedo-React" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
+  <img align="center" alt="Quevedo-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
+  <img align="center" alt="Quevedo-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
+</div>
+
+
+
+## Iniciando o projeto
+
+Para inicar o projeto, você precisa rodar no terminal:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Abra no seguinte enderço: [http://localhost:3000](http://localhost:3000) para navegar pela aplicação no navegador.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+##
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Chave de acesso para uso nos testes:** F51BBD2CB341C3D123232EB60322BAC220F9175EC646ABA7ABCC9BB507708B19F2AE3D6777DF1B4ED26FFCDD8DF25627ACCDF6554EF29C999F9DA080FD941374

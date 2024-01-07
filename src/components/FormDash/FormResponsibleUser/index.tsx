@@ -1,4 +1,4 @@
-import React, { useEffect, useState, forwardRef } from 'react';
+import React, { forwardRef, useEffect, useState } from 'react';
 import api from '../../../api';
 import { Select } from './style';
 

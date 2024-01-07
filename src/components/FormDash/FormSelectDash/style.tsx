@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Select = styled.select` 
-    width: 8%;
+    width: 10%;
     height: 65%;
     border-radius: 2px;
     padding-left:0.6em;
