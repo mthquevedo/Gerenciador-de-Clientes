@@ -25,11 +25,11 @@ Tecnologias utilizadas:
 
 ## Iniciando o projeto
 
-Para inicar o projeto, você precisa rodar no terminal:
+Para iniciar o projeto, você precisa rodar no terminal:
 
 ### `npm start`
 
-Abra no seguinte enderço: [http://localhost:3000](http://localhost:3000) para navegar pela aplicação no navegador.
+Abra no seguinte endereço: [http://localhost:3000](http://localhost:3000) para navegar pela aplicação no navegador.
 
 ##
 
